@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+    background-color: transparent !important;
+    /*background-color: black;*/
+}
+
+* {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+
+.hotkey-container {
+    width: 270px;
+    height: 75px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+    /*display: flex;*/
+    flex-flow: row;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+
+kbd {
+    background-color: none;
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: 1px solid white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+    color: white;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 3;
+    /*padding: 4px 4px;*/
+    white-space: nowrap;
+    text-align: center;
+}
+
+span {
+    color: green;
+}
+
+.key {
+    position: absolute;
+    font-size: 27px;
+    margin-top: 13px;
+    margin-left: 20px;
+    color: white;
+    border-radius: 3px;
+    border: 1px solid white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+    padding: 7px 10px;
+}
+
+.text {
+    position: absolute;
+    font-size: 27px;
+    margin-top: 7px;
+    margin-left: 85px;
+}
+
+.pressto {
+    position: absolute;
+    font-size: 13px;
+    margin-top: 45px;
+    margin-left: 85px;
+}
