@@ -1,9 +1,11 @@
 # mack-hotkey  
 
 ## 📗 How to Use  
+
 On your Client-Side use:  
 - `exports['mack_hotkey']:SendHotKey('text', 'hotkey')` to show up a hotkey  
 - `exports['mack_hotkey']:ExitHotKey('text', 'hotkey')` to remove the hotkey  
+
 Example using esx_accessories:  
 **Original:**  
 ```Citizen.CreateThread(function()
