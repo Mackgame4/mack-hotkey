@@ -6,7 +6,7 @@ On your Client-Side use:
 - `exports['mack_hotkey']:ExitHotKey('text', 'hotkey')` to remove the hotkey
 Example using esx_accessories:  
 **Original:**
-```Citizen.CreateThread(function()
+`Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
 		local coords = GetEntityCoords(PlayerPedId())
@@ -18,10 +18,10 @@ Example using esx_accessories:
 			end
 		end
 	end
-end)```
+end)`
 
 **With hotkey:**
-```Citizen.CreateThread(function()
+`Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
 		local coords = GetEntityCoords(PlayerPedId())
@@ -39,7 +39,7 @@ end)```
 			end
 		end
 	end
-end)```
+end)`
 
 ## ⚙️ How to Install  
 - Download mack_hotkey (https://github.com/Mackgame4/mack-hotkey) and drop in your "resources" folder  
