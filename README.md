@@ -21,7 +21,7 @@ Example using esx_accessories:
 end)``
 
 **With hotkey:**
-``Citizen.CreateThread(function()
+```Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
 		local coords = GetEntityCoords(PlayerPedId())
@@ -39,7 +39,7 @@ end)``
 			end
 		end
 	end
-end)``
+end)```
 
 ## ⚙️ How to Install  
 - Download mack_hotkey (https://github.com/Mackgame4/mack-hotkey) and drop in your "resources" folder  
@@ -47,8 +47,8 @@ end)``
 - Just start your server and have fun  
 
 ## 📷 Screenshots  
-Screenshot:
-Video:
+Screenshot: https://i.imgur.com/XhZ8Cbr.png  
+Video: Coming Soon  
 
 ## 🔖 Attention:  
 Don't change the folder name ("mack_hotkey") or it won't work
