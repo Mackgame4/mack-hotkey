@@ -1,11 +1,11 @@
 # mack-hotkey  
 
-📗 How to Use  
-On your Client-Side use:
-- `exports['mack_hotkey']:SendHotKey('text', 'hotkey')` to show up a hotkey
-- `exports['mack_hotkey']:ExitHotKey('text', 'hotkey')` to remove the hotkey
+## 📗 How to Use  
+On your Client-Side use:  
+- `exports['mack_hotkey']:SendHotKey('text', 'hotkey')` to show up a hotkey  
+- `exports['mack_hotkey']:ExitHotKey('text', 'hotkey')` to remove the hotkey  
 Example using esx_accessories:  
-**Original:**
+**Original:**  
 ```Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
@@ -21,7 +21,7 @@ Example using esx_accessories:
 end)
 ```
 
-**With hotkey:**
+**With hotkey:**  
 ```Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
@@ -53,9 +53,9 @@ Screenshot: https://i.imgur.com/XhZ8Cbr.png
 Video: Coming Soon  
 
 ## 🔖 Attention:  
-Don't change the folder name ("mack_hotkey") or it won't work
+Don't change the folder name ("mack_hotkey") or it won't work  
 
 ## ☁️ Download:  
 [Here](https://github.com/Mackgame4/mack_hotkey) or Github (https://github.com/Mackgame4/mack_hotkey)  
 Join our [Discord](https://discord.gg/As3VMTb) or in (https://discord.io/mack)  
-### Creators: Mackgame4
+### Creators: Mackgame4  
