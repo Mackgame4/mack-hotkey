@@ -1,5 +1,8 @@
 # mack-hotkey  
 
+📗 How to Use  
+Example:``````
+
 ## ⚙️ How to Install  
 - Download mack_hotkey (https://github.com/Mackgame4/mack-hotkey) and drop in your "resources" folder  
 - Add to your server.cfg, the following line: ```ensure mack_hotkey```  
