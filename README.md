@@ -8,7 +8,8 @@ On your Client-Side use:
 
 Example using esx_accessories:  
 **With hotkey:**  
-```Citizen.CreateThread(function()
+```
+Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
 		local coords = GetEntityCoords(PlayerPedId())
@@ -81,9 +82,10 @@ Screenshot: https://i.imgur.com/XhZ8Cbr.png
 Video: Coming Soon  
 
 ## 🔖 Attention:  
-Don't change the folder name ("mack_hotkey") or it won't work  
+- Don't change the folder name ("mack_hotkey") or it won't work  
+- Remember to create different variables to different events (at least you want the same event/effect)
 
 ## ☁️ Download:  
-[Here](https://github.com/Mackgame4/mack_hotkey) or Github (https://github.com/Mackgame4/mack_hotkey)  
+[Here](https://github.com/Mackgame4/mack-hotkey) or Github (https://github.com/Mackgame4/mack-hotkey)  
 Join our [Discord](https://discord.gg/As3VMTb) or in (https://discord.io/mack)  
 ### Creators: Mackgame4  
