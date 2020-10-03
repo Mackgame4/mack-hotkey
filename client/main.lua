@@ -1,3 +1,5 @@
+local debug = false
+
 RegisterNetEvent('mack_hotkey:client:HotKey')
 AddEventHandler('mack_hotkey:client:HotKey', function(data)
 	SendHotKey(data.text, data.hotkey, data.exit)
@@ -21,9 +23,13 @@ function ExitHotKey(text, hotkey, exit)
 end
 
 RegisterCommand("hotkey", function(source , args, rawCommand)
-	exports['mack_hotkey']:SendHotKey('Clotheshop', 'E')
+	if debug then
+		exports['mack_hotkey']:SendHotKey('Clotheshop', 'E')
+	end
 end)
 
 RegisterCommand("exithotkey", function(source , args, rawCommand)
-	exports['mack_hotkey']:ExitHotKey('Clotheshop', 'E')
+	if debug then
+		exports['mack_hotkey']:ExitHotKey('Clotheshop', 'E')
+	end
 end)
