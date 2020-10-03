@@ -3,11 +3,12 @@
 ## 📗 How to Use  
 
 On your Client-Side use:  
-- `exports['mack_hotkey']:SendHotKey('text', 'hotkey')` to show up a hotkey  
-- `exports['mack_hotkey']:ExitHotKey('text', 'hotkey')` to remove the hotkey  
+- `exports['mack_hotkey']:SendHotKey('text', 'hotkey', 'id')` to show up a hotkey  
+- `exports['mack_hotkey']:ExitHotKey('text', 'hotkey', 'id')` to remove the hotkey  
+#### Id will link the Hotkeys so you can control all the content using only the id
 
 Example using esx_accessories:  
-**With hotkey:**  
+**Original:**  
 ```
 Citizen.CreateThread(function()
 	while true do
@@ -16,56 +17,38 @@ Citizen.CreateThread(function()
 		for k,v in pairs(Config.Zones) do
 			for i = 1, #v.Pos, 1 do
 				if(Config.Type ~= -1 and GetDistanceBetweenCoords(coords, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z, true) < Config.DrawDistance) then
-				local dstCheck = GetDistanceBetweenCoords(coords, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z, true)
-				if dstCheck <= 1.5 then
-					IsHotkeyActive1 = true
-				else
-					IsHotkeyActive1 = false
-				end
-				local distance = GetDistanceBetweenCoords(coords, 81.0, -1393.84, 29.38, true)
-				if distance <= 1.5 then
-					IsHotkeyActive2 = true
-				else
-					IsHotkeyActive2 = false
-				end
-					DrawMarker(Config.Type, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.Size.x, Config.Size.y, Config.Size.z, Config.Color.r, Config.Color.g, Config.Color.b, 100, false, true, 2, false, false, false, false)
+				  DrawMarker(Config.Type, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.Size.x, Config.Size.y, Config.Size.z, Config.Color.r, Config.Color.g, Config.Color.b, 100, false, true, 2, false, false, false, false)
 				end
 			end
 		end
 	end
 end)
-
--- This
-Citizen.CreateThread(function()
+```
+**With hotkey:**  
+```Citizen.CreateThread(function()
 	while true do
-	Citizen.Wait(0)
-		if IsHotkeyActive1 or IsHotkeyActive2 then
-			exports['mack_hotkey']:SendHotKey('Clotheshop', 'E')
-		else
-			exports['mack_hotkey']:ExitHotKey('Clotheshop', 'E')
-		end
-	end
-end)
-
--- Or
-Citizen.CreateThread(function()
-	while true do
-	Citizen.Wait(0)
-		if IsHotkeyActive1 then
-			exports['mack_hotkey']:SendHotKey('Accessories', 'E')
-		else
-			exports['mack_hotkey']:ExitHotKey('Accessories', 'E')
-		end
-	end
-end)
-
-Citizen.CreateThread(function()
-	while true do
-	Citizen.Wait(0)
-		if IsHotkeyActive2 then
-			exports['mack_hotkey']:SendHotKey('Clotheshop', 'E')
-		else
-			exports['mack_hotkey']:ExitHotKey('Clotheshop', 'E')
+		Citizen.Wait(0)
+		local coords = GetEntityCoords(PlayerPedId())
+		for k,v in pairs(Config.Zones) do
+			for i = 1, #v.Pos, 1 do
+				if(Config.Type ~= -1 and GetDistanceBetweenCoords(coords, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z, true) < Config.DrawTextDistance) then
+				-- ### Location 1
+				local dstCheck = GetDistanceBetweenCoords(coords, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z, true)
+				if dstCheck <= 1.5 then
+					exports['mack_hotkey']:SendHotKey('Accessories', 'E', 1)
+				else
+					exports['mack_hotkey']:ExitHotKey('Accessories', 'E', 1)
+				end
+				-- ### Location 2
+				local distance = GetDistanceBetweenCoords(coords, v.Pos[i].x+1, v.Pos[i].y+1, v.Pos[i].z, true)
+				if distance <= 1.5 then
+					exports['mack_hotkey']:SendHotKey('Clotheshop', 'E', 2)
+				else
+					exports['mack_hotkey']:ExitHotKey('Clotheshop', 'E', 2)
+				end
+					DrawMarker(Config.Type, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.Size.x, Config.Size.y, Config.Size.z, Config.Color.r, Config.Color.g, Config.Color.b, 100, false, true, 2, false, false, false, false)
+				end
+			end
 		end
 	end
 end)
