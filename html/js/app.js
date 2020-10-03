@@ -32,7 +32,7 @@ function ShowHotKey(data) {
         document.getElementById(`text-${data.id}`).style = "position:absolute;font-size:27px;margin-top:7px;margin-left:85px;";
         document.getElementById(`key-${data.id}`).innerHTML = data.hotkey;
         document.getElementById(`key-${data.id}`).style = "position:absolute;font-size:27px;margin-top:13px;margin-left:20px;color:#fff;border-radius:3px;border:1px solid #fff;box-shadow:0 1px 1px rgba(0,0,0,.2),0 2px 0 0 rgba(255,255,255,.7) inset;padding:7px 10px;";
-        document.getElementById(`pressto-${data.id}`).innerHTML = "Press [<span></span>] to interact";
+        document.getElementById(`pressto-${data.id}`).innerHTML = `Press [<span>${data.hotkey}</span>] to interact`;
         document.getElementById(`pressto-${data.id}`).style = "position:absolute;font-size:13px;margin-top:45px;margin-left:85px;";
         //$("#hotkey-container").fadeIn();
         document.getElementById(`hotkey-container-${data.id}`).style.display = "flex";
