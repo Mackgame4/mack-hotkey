@@ -18,7 +18,6 @@ Citizen.CreateThread(function()
 				if(Config.Type ~= -1 and GetDistanceBetweenCoords(coords, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z, true) < Config.DrawDistance) then
 				local dstCheck = GetDistanceBetweenCoords(coords, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z, true)
 				if dstCheck <= 1.5 then
-					text = "[~r~E~s~] Mudar "
 					IsHotkeyActive1 = true
 				else
 					IsHotkeyActive1 = false
