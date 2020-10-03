@@ -44,8 +44,9 @@ function ShowHotKey(data) {
         }
     } else {
         //$("#hotkey-container").fadeOut();
-        if (document.getElementById(`hotkey-container-${data.id}`).style.display != "none") {
-        document.getElementById(`hotkey-container-${data.id}`).style.display = "none";
+        hotkeycontainer = document.getElementById(`hotkey-container-${data.id}`)
+        if (hotkeycontainer != null) {
+        hotkeycontainer.style.display = "none";
         document.getElementById(`text-${data.id}`).innerHTML = "";
         document.getElementById(`key-${data.id}`).innerHTML = "";
         document.getElementById(`pressto-${data.id}`).innerHTML = "";
