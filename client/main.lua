@@ -1,4 +1,4 @@
-local debug = true
+local debug = false
 
 RegisterNetEvent('mack_hotkey:client:HotKey')
 AddEventHandler('mack_hotkey:client:HotKey', function(data)
