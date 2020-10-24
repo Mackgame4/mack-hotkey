@@ -4,7 +4,7 @@
 
 On your Client-Side use:  
 - `exports['mack_hotkey']:SendHotKey('text', 'hotkey', 'id')` to show up a hotkey  
-- `exports['mack_hotkey']:ExitHotKey('text', 'hotkey', 'id')` to remove the hotkey  
+- `exports['mack_hotkey']:ExitHotKey('id')` to remove the hotkey  
 #### Id will link the Hotkeys so you can control all the content using only the id
 
 Example using esx_accessories:  
@@ -37,14 +37,14 @@ end)
 				if dstCheck <= 1.5 then
 					exports['mack_hotkey']:SendHotKey('Accessories', 'E', 1)
 				else
-					exports['mack_hotkey']:ExitHotKey('Accessories', 'E', 1)
+					exports['mack_hotkey']:ExitHotKey(1)
 				end
 				-- ### Location 2
 				local distance = GetDistanceBetweenCoords(coords, v.Pos[i].x+1, v.Pos[i].y+1, v.Pos[i].z, true)
 				if distance <= 1.5 then
 					exports['mack_hotkey']:SendHotKey('Clotheshop', 'E', 2)
 				else
-					exports['mack_hotkey']:ExitHotKey('Clotheshop', 'E', 2)
+					exports['mack_hotkey']:ExitHotKey(2)
 				end
 					DrawMarker(Config.Type, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.Size.x, Config.Size.y, Config.Size.z, Config.Color.r, Config.Color.g, Config.Color.b, 100, false, true, 2, false, false, false, false)
 				end
